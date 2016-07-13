@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
+
+
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="top">
+            <div class="top">
+                <div class="top1"> <img src="image/Envelope-icon.png" class="logo2" alt="logo"> <a class="sin-boton" href="mailto:info@tgif.net" target="_top">info@tgif.net</a>
+                </div>
+                <img src="image/usa-logo-wb.jpg" class="img-circle" alt="logo">
+            </div>
+
+            <nav class="navbar container">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav container1">
+                        <li><a href="home-starter-page.html" class="botones">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle botones" data-toggle="dropdown" href="#">Congress 113
+                        <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="house-starter-page.html">House</a></li>
+                                <li><a href="senate-starter-page.html">Senate</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle botones" data-toggle="dropdown" href="#">Attendance
+                        <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="house-attendance-starter-page.html">House</a></li>
+                                <li><a href="senate-attendance-starter-page.html">Senate</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle botones" data-toggle="dropdown" href="#">Party Loyalty
+                        <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="house-party-loyalty-starter-page.html">House</a></li>
+                                <li><a href="senate-party-loyalty-starter-page.html">Senate</a></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+
+            <header>
+                <div>
+                </div>
+            </header>
+            <!--Table container-->
+            <div class="container">
+                <h2>Senators</h2>
+                <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
+
+                <form id="filters">
+                    <div id="filterByPartyDiv">
+                        <span>Filter by party:</span>
+                        <input type="checkbox" id="R" name="checK" class="Filter" checked>
+                        <label>Republican</label>
+                        <input type="checkbox" id="D" name="checK" class="Filter" checked>
+                        <label>Democrat</label>
+                        <input type="checkbox" id="I" name="checK" class="Filter" checked>
+                        <label>Independent</label>
+                    </div>
+                    <div id="filterByStateDiv">
+                        <span>Filter by state:</span>
+                        <select id="allStates" name="stateSelect" class="Filter">
+                            <option value="all">All</option>
+                        </select>
+                    </div>
+                </form>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>party</th>
+                            <th>State</th>
+                            <th>Seniority</th>
+                            <th>% votes</th>
+                            <th>Birthday</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="senate-data">
+                        <script id="data-template" type="text/html">
+                            {{#members}}
+                            <tr class="memberFilter">
+                                <td><a href="{{url}}">{{{name}}}</a></td>
+                                <td class="party">{{party}}</td>
+                                <td class="state">{{state}}</td>
+                                <td>{{seniority}}</td>
+                                <td>{{votes_with_party_pct}}</td>
+                                <td></td>
+                            </tr>
+                            {{/members}}
+
+                        </script>
+
+                    </tbody>
+                </table>
+                <footer>
+
+                    <div style="font-size : 18px" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 footer">©2016 TGIF| All rights reserved</div>
+
+                </footer>
+            </div>
+
+
+            <script src="js/main.js"></script>
+            <script src="js/filters.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>

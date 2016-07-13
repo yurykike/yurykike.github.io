@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
+
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body>
+    <div class="contenedor">
+
+        <div class="top">
+            <div class="top1"> <img src="image/Envelope-icon.png" class="logo2" alt="logo"> <a class="sin-boton" href="mailto:info@tgif.net" target="_top">info@tgif.net</a>
+            </div>
+            <img src="image/usa-logo-wb.jpg" class="img-circle" alt="logo">
+        </div>
+        <nav class="navbar container">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav container1">
+                    <li><a href="home-starter-page.html" class="botones">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle botones" data-toggle="dropdown" href="#">Congress 113<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="house-starter-page.html">House</a></li>
+                            <li><a href="senate-starter-page.html">Senate</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle botones" data-toggle="dropdown" href="#">Attendance
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="house-attendance-starter-page.html">House</a></li>
+                            <li><a href="senate-attendance-starter-page.html">Senate</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle botones" data-toggle="dropdown" href="#">Party Loyalty
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="house-party-loyalty-starter-page.html">House</a></li>
+                            <li><a href="senate-party-loyalty-starter-page.html">Senate</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+
+        <header>
+            <div>
+                <p style="display:none">https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment</p>
+
+            </div>
+        </header>
+        <!--Table container-->
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <h2>Attendance</h2>
+                    <p>The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.</p>
+
+                    <p>The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1"></div>
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                    <h2>House at a glance</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Party</th>
+                                <th>Number of Reps</th>
+                                <th>% Voted with Prty</th>
+                            </tr>
+                        </thead>
+                        <tbody id="glance">
+                            <script id="data-template0" type="text/html">
+                                <tr>
+                                    <td>Republican</td>
+                                    <td>{{republicans.number}} </td>
+                                    <td>{{republicans.votes_with_party_pct}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Democrat</td>
+                                    <td>{{democrats.number}}</td>
+                                    <td>{{democrats.votes_with_party_pct}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Independent</td>
+                                    <td>{{independents.number}}</td>
+                                    <td>{{independents.votes_with_party_pct}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>{{total.number}}</td>
+                                    <td>{{total.votes_with_party_pct}}</td>
+                                </tr>
+                            </script>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <hr class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="grid2">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <h2>Least Engaged (Bottom 10% Attendance)</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Number of Missed Votes</th>
+                                <th>% Missed</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lE">
+                            <script id="data-template" type="text/html">
+                                {{#membersLeast}}
+                                <tr>
+                                    <td><a href="{{url}}">{{{names}}}</a></td>
+                                    <td>{{votes}}</td>
+                                    <td>{{pct}}</td>
+                                </tr>
+                                {{/membersLeast}}
+
+                            </script>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1"></div>
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+
+                    <h2>Most Engaged (Top 10% Attendance)</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Number of Missed Votes</th>
+                                <th>% Missed</th>
+                            </tr>
+                        </thead>
+                        <tbody id="mE">
+
+                            <script id="data-template2" type="text/html">
+                                {{#membersMost}}
+                                <tr>
+                                    <td><a href="{{url}}">{{{names}}}</a></td>
+                                    <td>{{votes}}</td>
+                                    <td>{{pct}}</td>
+                                </tr>
+                                {{/membersMost}}
+
+                            </script>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <footer>
+
+                <div style="font-size : 18px" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 footer">©2016 TGIF| All rights reserved</div>
+
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/statistics.js"></script>
+    <script src="js/attendance.js"></script>
+
+</body>
+
+</html>

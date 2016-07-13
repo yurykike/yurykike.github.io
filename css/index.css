@@ -1,0 +1,104 @@
+html{
+    height: 100%;
+}
+
+body{
+    background-image: url(../image/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    height: 100%;
+    
+    
+}
+
+a{
+    color: black;
+}
+.container1{
+
+    font-size: 18px;
+    
+}
+
+.navbar{
+    background-color: transparent;
+}
+
+//div.top{
+    background-image: url(../image/shutterstock_119809810.jpg);
+    width: 100%;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    border-style: groove;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.botones{ 
+    border-style:hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-right:7px;
+    
+}
+
+.top1{
+    text-align: right;
+    float: right;
+    position: relative;
+    right: 20px;
+}
+.logo2{
+    width: 30px;
+    
+}
+.sin-boton{
+    font-size: 20px;
+    color: rebeccapurple;
+}
+p{
+    text-align: justify;
+}
+
+.footer{
+     padding-top: 50px;
+}
+
+footer{
+    
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+   
+    
+    
+    
+    
+   
+}  
+.img-circle{
+    width: 150px;
+    height:150px;
+    
+}
+
+#filters{
+    display: flex;
+}
+#filterByPartyDiv{
+    width: 400px;
+}
+
+
+#filterByStateDiv{
+    width: 300px;
+    float: right;
+}
+
+
