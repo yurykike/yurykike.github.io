@@ -163,7 +163,7 @@ function urlNYT (){
         chamber = "senate";
     };
 
-    var url = "http://api.nytimes.com/svc/politics/v3/us/legislative/congress/113/" + chamber + "/members/current.json"
+    var url = "https://api.nytimes.com/svc/politics/v3/us/legislative/congress/113/" + chamber + "/members/current.json"
     url += '?' + $.param({
         'api-key': "8cd554dc2769412f9a4705f50a8a77ed"
     });
